@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TOKO Aini Fashion Shop</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/styles.css" rel="stylesheet">
+  </head>
+  <body style="background-color: blue;">
+  <!-- Awal script Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" id="scrollspy">
+    <div class="container">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle Nav</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="Home.html">TOKO Aini Fashion Shop</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="Home.html"><span class="glyphicon glyphicon-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+              <a href="About.html"><span class="glyphicon glyphicon-user"></span> About</a>
+            </li>
+            <li>
+              <a href="Product.html"><span class="glyphicon glyphicon-picture"></span> Product</a>
+            </li>
+            <li>
+              <a href="Checkout.html"><span class="glyphicon glyphicon-info-sign"></span> Checkout</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav><!-- Akhir script Navbar -->
+		<!-- Awal script Slider/ Carousel -->
+		<div id="contoh-carousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#contoh-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#contoh-carousel" data-slide-to="1"></li>
+        <li data-target="#contoh-carousel" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+			<!-- Awal script Slider pertama -->
+        <div class="item active">
+          <img src="images/logo.jpg" alt="Berisi keterangan gambar">
+          <div class="carousel-caption">
+            <h1>SELAMAT DATANG DITOKO AINI FASHION SHOP</h1>
+            <h4>OUTFID TERNYAMAN</h4>
+            <p>Toko AINI FASHION SHOP Jalan Pendawa Desa Karang Rejo Pasar 2,Stabat,Langkat,Sumatera</p>
+          </div>
+    </div>
+		<!-- Awal script Button Geser Kiri dan Kanan -->
+    <a class="left carousel-control" href="#contoh-carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+	</a><!-- Akhir script Button Geser Kiri dan Kanan -->
+
+		<!-- Awal Panel -->
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-body">
+				<h2 style="text-muted"><span class="glyphicon glyphicon-list"></span> Model Outfid Kami</h2>
+        <p>Toko AINI FASHION SHOP Jalan Pendawa Desa Karang Rejo Pasar 2,Stabat,Langkat,Sumatera</p>
+				<div class="row">
+					<div class="col-md-3"> 
+            <h3>GAMIS</h3>
+            <img src="images/gamis.jpg" class="img-thumbnail img-responsive">
+            <p>GAMIS<br/><a class="btn btn-danger btn-xs" href="123.html"role="button">Selengkapnya</a></p>
+          </div>
+          <h3>BLOUSE</h3>
+            <img src="images/blouse.jpg" class="img-thumbnail img-responsive">
+            <p>BLOUSE<br/><a class="btn btn-danger btn-xs" href="123.html"role="button">Selengkapnya</a></p>
+          </div>
+					<h3>Kemeja</h3>
+						<img src="images/kemeja.jpg" class="img-thumbnail img-responsive">
+						<p>Kemeja<br/><a class="btn btn-danger btn-xs" href="Product.html"role="button">Selengkapnya</a></p>
+					</div>
+          <div class="col-md-3">
+          <h3>Batik</h3>
+            <img src="images/batik.jpg" class="img-thumbnail img-responsive">
+            <p>Batik<br/><a class="btn btn-danger btn-xs" href="Product.html"role="button">Selengkapnya</a></p>
+          </div>
+          <div class="col-md-3">
+          <h3>  Croptop</h3>
+            <img src="images/croptop.jpg" class="img-thumbnail img-responsive">
+            <p>Croptop<br/><a class="btn btn-info btn-xs" href="Product.html"role="button">Selengkapnya</a></p>
+          </div>
+          <div class="col-md-3">
+          <h3>  Piyama</h3>
+            <img src="images/piyama.jpg" class="img-thumbnail img-responsive">
+            <p>Piyama<br/><a class="btn btn-info btn-xs" href="Product.html"role="button">Selengkapnya</a></p>
+          </div>
+          <div class="col-md-3">
+          <h3>  Daster</h3>
+            <img src="images/daster.jpg" class="img-thumbnail img-responsive">
+            <p>Daster<br/><a class="btn btn-info btn-xs" href="Product.html"role="button">Selengkapnya</a></p>
+          </div>
+         
+<script>
+  // Ambil keranjang dari localStorage, atau buat array kosong
+  let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+
+  // Event listener untuk semua tombol dengan class 'btnBeli'
+  document.querySelectorAll(".btnBeli").forEach(button => {
+    button.addEventListener("click", function () {
+      const nama = this.dataset.nama;
+      const harga = parseInt(this.dataset.harga);
+      const jumlah = 1;
+
+      // Cek apakah produk sudah ada di keranjang
+      const existingItem = keranjang.find(item => item.nama === nama);
+      if (existingItem) {
+        existingItem.jumlah += 1;
+      } else {
+        keranjang.push({ nama, harga, jumlah });
+      }
+
+      // Simpan kembali ke localStorage
+      localStorage.setItem("keranjang", JSON.stringify(keranjang));
+
+      // Redirect ke halaman checkout
+      window.location.href = "987.html"; // Ganti dengan nama halaman checkout-mu
+    });
+  });
+</script>
+    
+	<script src="bootstrap/js/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/dataTables.bootstrap.min.js"></script>
+	<script src="bootstrap/js/jquery.dataTables.js"></script>
+	<script src="bootstrap/js/scripts.js"></script>
+	</body>
+</html>

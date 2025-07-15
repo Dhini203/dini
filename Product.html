@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TOKO AINI FASHION SHOP</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap/css/dataTables.bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap/css/styles.css" rel="stylesheet">
+		<style>
+      body {
+        padding-top: 60px; 
+      }
+		</style>
+  </head>
+  <body>
+	<!-- Awal script Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" id="scrollspy">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle Nav</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="Home.html">TOKO AINI FASHION SHOP</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+        <li>
+							<a href="Home.html"><span class="glyphicon glyphicon-home"></span> Home <span class="sr-only">(current)</span></a>
+						</li>
+        <li>
+							<a href="About.html"><span class="glyphicon glyphicon-user"></span> About</a>
+						</li>
+        <li>
+              <li class="active">
+							<a href="Product.html"><span class="glyphicon glyphicon-picture"></span> Product</a>
+						</li>
+        <li>
+							<a href="Checkout.html"><span class="glyphicon glyphicon-info-sign"></span> Checkout</a>
+						</li>
+          </ul>
+        </div>
+      </div>
+    </nav><!-- Akhir script Navbar -->
+		
+      </div>
+			<div class="container">
+    <div class="page-header text-center">
+      <h1>Daftar Produk Kami</h1>
+      <p>Outfit Ternyaman </p>
+    </div>
+
+     <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/gamis.jpg" alt="GAMIS">
+          <div class="caption">
+            <h4>GAMIS</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('KEMEJA', 550.000)">Pesan</button>
+          </div>
+        </div>
+      </div>
+    <div class="row text-center">
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/tunik.jpeg" alt="TUNIK">
+          <div class="caption">
+            <h4>TUNIK</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('TUNIK', 485.000)">Pesan</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/blouse.jpg" alt="BLOUSE">
+          <div class="caption">
+            <h4>BLOUSE</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('BLOUSE', 250.000)">Pesan</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/batik.jpg" alt="BATIK">
+          <div class="caption">
+            <h4>BATIK</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('BATIK', 150.000)">Pesan</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/kemeja.jpg" alt="KEMEJA">
+          <div class="caption">
+            <h4>KEMEJA</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('KEMEJA', 150.000)">Pesan</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/oneset.jpg" alt="ONESET">
+          <div class="caption">
+            <h4>ONESET</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('ONESET', 180.000)">Pesan</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/croptop.jpg" alt="CROOPTOP">
+          <div class="caption">
+            <h4>CROOPTOP</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('CROOPTOP', 90.000)">Pesan</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/kaos.jpg" alt="BATIK">
+          <div class="caption">
+            <h4>KAOS</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('KAOS', 15000)">Pesan</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/piyama.jpg" alt="BATIK">
+          <div class="caption">
+            <h4>PIYAMA</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('PIYAMA', 75.000)">Pesan</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/daster.jpg" alt="DASTER">
+          <div class="caption">
+            <h4>DASTER</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('DASTER', 55.000)">Pesan</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/jeans.jpg" alt="JEANS">
+          <div class="caption">
+            <h4>JEANS</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('JEANS', 40000)">Pesan</button>
+      </div>
+		</div>
+	  </div>
+    <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/rok coklat.jpg" alt="ROK">
+          <div class="caption">
+            <h4>ROK</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('ROK', 175.000)">Pesan</button>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/rok tutu.jpg" alt="ROK TUTU">
+          <div class="caption">
+            <h4>ROK TUTU</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('ROK TUTU', 150.000)">Pesan</button>
+      </div>
+    </div>
+    </div>
+		  <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="images/rokbkk.jpg" alt="ROK BKK">
+          <div class="caption">
+            <h4>ROK BKK</h4>
+            <p></p>
+            <button class="btn btn-success btn-sm" onclick="tambahKeKeranjang('ROK BKK', 120.000)">Pesan</button>
+		  </div>
+		</div>
+	  </div>
+    
+		 <script>
+  function tambahKeKeranjang(namaProduk, hargaProduk) {
+    let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+
+    // Cek apakah produk sudah ada
+    const produkAda = keranjang.find(item => item.nama === namaProduk);
+    if (produkAda) {
+      produkAda.jumlah += 1;
+    } else {
+      keranjang.push({ nama: namaProduk, harga: hargaProduk, jumlah: 1 });
+    }
+
+    // Simpan ke localStorage
+    localStorage.setItem("keranjang", JSON.stringify(keranjang));
+
+    // Arahkan ke halaman checkout
+    window.location.href = "Checkout.html"; // Ganti sesuai nama file checkout kamu
+  }
+</script>
+
+ <script src="bootstrap/js/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/dataTables.bootstrap.min.js"></script>
+	<script src="bootstrap/js/jquery.dataTables.js"></script>
+	<script src="bootstrap/js/scripts.js"></script>
+	</body>
+</html>
+        
+    
+   

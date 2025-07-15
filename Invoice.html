@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Invoice</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Invoice</h1>
+    <table class="table table-bordered mt-4">
+      <thead class="thead-light">
+        <tr>
+          <th>No</th>
+          <th>Produk</th>
+          <th>Harga</th>
+          <th>Jumlah</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="invoice-body">
+        <!-- Baris invoice akan dimasukkan via JS -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4" class="text-right">Total</th>
+          <th id="invoice-total">0</th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <button id="btn-confirm" class="btn btn-success">Confirm & Pay</button>
+    <button id="btn-clear" class="btn btn-danger">Clear Cart</button>
+  </div>
+
+  <script src="bootstrap/js/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    function formatRupiah(amount) {
+      return "Rp " + amount.toLocaleString("id-ID");
+    }
+
+    function renderInvoice() {
+      const keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+      const tbody = $("#invoice-body");
+      tbody.empty();
+
+      let total = 0;
+      keranjang.forEach((item, idx) => {
+        const subtotal = item.harga * item.jumlah;
+        total += subtotal;
+
+        tbody.append(`
+          <tr>
+            <td>${idx + 1}</td>
+            <td>${item.nama}</td>
+            <td>${formatRupiah(item.harga)}</td>
+            <td>${item.jumlah}</td>
+            <td>${formatRupiah(subtotal)}</td>
+          </tr>
+        `);
+      });
+
+      $("#invoice-total").text(formatRupiah(total));
+    }
+
+    $(document).ready(function () {
+      renderInvoice();
+
+      $("#btn-clear").click(() => {
+        localStorage.removeItem("keranjang");
+        renderInvoice();
+      });
+
+      $("#btn-confirm").click(() => {
+        alert("Terima kasih! Pesanan Anda akan diproses.");
+        localStorage.removeItem("keranjang");
+        renderInvoice();
+      });
+    });
+  </script>
+</body>
+</html>
